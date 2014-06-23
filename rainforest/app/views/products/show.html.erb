@@ -1,2 +1,8 @@
 <h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<p>Product Name:  <%= @product.name %></p>
+<p>Description:  <br><br><%= @product.description %></p>
+<p>Price:  $<%= @product.formatted_price %></p>
+
+<!-- 	    t.string   "name"
+    t.text     "description"
+    t.integer  "price_in_cents" -->
