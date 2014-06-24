@@ -9,4 +9,11 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user
+
+  def ensure_logged_in
+  	unless current_user
+  		flash[:alert] = "I noticed you are not logged in.  Please do so."
+  		redirect_to new_session_path
+  	end
+  end
 end
