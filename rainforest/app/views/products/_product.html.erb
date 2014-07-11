@@ -1,0 +1,7 @@
+<% @products.each do |product| %>
+	<div class="products">
+	<% x = product.id %>
+	<p><%= link_to product.name, "/products/#{x}" %>  $<%= product.formatted_price %><br>
+	<%= product[:description] %></p>
+	</div>
+<% end %>
