@@ -2,6 +2,6 @@
 	<div class="products">
 	<% x = product.id %>
 	<p><%= link_to product.name, "/products/#{x}" %>  $<%= product.formatted_price %><br>
-	<%= product[:description] %></p>
+	<%= truncate(product.description, length: 150) %></p>
 	</div>
 <% end %>

@@ -8,6 +8,8 @@
 
 <div id="products"><%= render "products/product" %></div>
 
+<div id="paginate"><%= paginate @products %></div>
+
 <script type="text/javascript">
   function display_search_results() {
     // readyState === 4 means that the asynchronous request completed successfully
